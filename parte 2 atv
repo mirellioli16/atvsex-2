@@ -1,0 +1,280 @@
+-- phpMyAdmin SQL Dump
+
+
+
+
+-- version 5.2.1
+
+
+-- https://www.phpmyadmin.net/
+
+
+--
+
+
+-- Host: 127.0.0.1:3306
+
+
+-- Tempo de geração: 27-Mar-2023 às 01:08
+
+
+-- Versão do servidor: 8.0.32
+
+
+-- versão do PHP: 7.4.3-4ubuntu2.18
+
+
+
+
+
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
+
+START TRANSACTION;
+
+
+SET time_zone = "+00:00";
+
+
+
+
+
+
+
+
+
+
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+
+
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+
+
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+
+
+/*!40101 SET NAMES utf8mb4 */;
+
+
+
+
+
+
+
+--
+
+
+-- Banco de dados: `localhostisa`
+
+
+--
+
+
+
+
+
+
+
+-- --------------------------------------------------------
+
+
+
+
+
+
+
+--
+
+
+-- Estrutura da tabela `Funcionários`
+
+
+--
+
+
+
+
+
+
+
+CREATE TABLE `Funcionários` (
+
+
+ `ID` int NOT NULL,
+
+
+ `Nome` varchar(50) DEFAULT NULL,
+
+
+ `Sobrenome` varchar(50) DEFAULT NULL,
+
+
+ `Data_Nascimento` date DEFAULT NULL,
+
+
+ `Email` varchar(50) DEFAULT NULL,
+
+
+ `Cargo` varchar(50) DEFAULT NULL,
+
+
+ `Salário` decimal(10,2) DEFAULT NULL,
+
+
+ `Departamento` varchar(50) DEFAULT NULL,
+
+
+ `Data_Admissão` date DEFAULT NULL,
+
+
+ `Numero_de_telefone` bigint DEFAULT NULL,
+
+
+ `Supervisor_imediato` varchar(50) DEFAULT NULL,
+
+
+ `Nivel_de_acesso_ao_sistema` varchar(50) DEFAULT NULL,
+
+
+ `Data_de_saida` date DEFAULT NULL
+
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
+
+
+
+--
+
+
+-- Extraindo dados da tabela `Funcionários`
+
+
+--
+
+
+
+
+
+
+
+INSERT INTO `Funcionários` (`ID`, `Nome`, `Sobrenome`, `Data_Nascimento`, `Email`, `Cargo`, `Salário`, `Departamento`, `Data_Admissão`, `Numero_de_telefone`, `Supervisor_imediato`, `Nivel_de_acesso_ao_sistema`, `Data_de_saida`) VALUES
+
+
+(1, 'Gabriela', 'Rodrigues', '1999-09-04', 'Gabriela@Rodrigues', 'Professor', 4000.00, 'Pedagogia', '2010-03-02', 112764294, 'Talia 6', 'Supervisor', '2015-09-23'),
+
+
+(16, 'Sabrina', 'Ferreira', '1998-06-05', 'Sabrina@Ferreira', 'Engenheiro de Dados', 5000.00, 'Tecnologia', '2012-09-23', 1198553907, 'Pedro 30', 'Administrador', '2010-05-13'),
+
+
+(19, 'Bruno', 'Santos', '1998-07-08', 'Bruno@Santos', 'Analista Financeiro', 6000.00, 'Contabilidade', '2015-12-02', 1144266744, 'Leandra 1', 'Funcionario', '2018-07-08'),
+
+
+(24, 'Marina', 'Martins', '1998-02-18', 'Marina@Martins', 'Dentista', 6000.00, 'Medicina', '2014-07-05', 1124690530, 'Kaio 21', 'Funcionario', '2020-09-06'),
+
+
+(28, 'Isabella', 'Lima', '1996-02-23', 'Isabella@Lima', 'Arquiteta', 8000.00, 'Arquitetura', '2018-06-08', 1125379763, 'Karen 8', 'Gerente', '2022-04-11'),
+
+
+(33, 'Emily', 'Pereira', '1979-05-09', 'Emily@Pereira', 'Engenharia Civil', 4000.00, 'Geotecnologia', '2000-07-09', 1123732908, 'lucas 4', 'Funcionario', '2010-09-03'),
+
+
+(39, 'Otavio', 'Fernandes', '1994-12-08', 'Otavio@Fernandes', 'Biólogo', 4000.00, 'Biologia', '2013-09-06', 1136894526, 'Carolina 23', 'Administrador', '2020-09-07'),
+
+
+(41, 'Karina', 'Gomes', '1995-12-06', 'Karina@Gomes', 'Consultora de Recursos Humanos', 3000.00, 'RH', '2011-05-08', 1125478945, 'Lais 10', 'Supervisor', '2012-08-03'),
+
+
+(47, 'Ana', 'Silva', '1995-03-08', 'Ana@silva.com', 'Gerente de Projetos', 5000.00, 'Tecnologia', '2012-02-23', 1155153907, 'João 12', 'Administrador', '2020-05-23'),
+
+
+(53, 'Rafa', 'Miranda', '1996-08-03', 'Rafa@Miranda', 'Agricultor', 6000.00, 'Agropecuária', '2014-01-09', 1174903462, 'Barbara 25', 'Gerente', '2019-05-03'),
+
+
+(56, 'Daniel', 'Souza', '1995-03-15', 'Daniel@Souza', 'Advogado', 4000.00, 'juridico', '2020-04-24', 1166743097, 'Diana 3', 'Gerente', '2023-09-04'),
+
+
+(61, 'Henrrique', 'Almeida', '1997-04-09', 'Henrrique@Almeida', 'Enfermeiro', 3000.00, 'Enfermagem', '2020-09-07', 1124386342, 'Fabia 7', 'Funcionario', '2023-09-05'),
+
+
+(67, 'Natalia', 'Mendes', '1997-12-25', 'Natalia@Mendes', 'Jornalista', 7000.00, 'Publicidade', '2012-08-05', 1132462347, 'Junior 22', 'Funcionario', '2020-05-09'),
+
+
+(70, 'Leo', 'Gomes', '1994-09-04', 'Leo@Gomes', 'Nutricionista', 5000.00, 'Medicina', '2012-12-01', 1127453892, 'Patricia 20', 'funcionaria', '2020-08-17'),
+
+
+(72, 'Tiago', 'Ribeiro', '1993-05-09', 'Tiago@Ribeiro', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+
+
+(75, 'Felipe', 'Costa', '1998-08-06', 'Felipe@Costa', 'Medico', 10000.00, 'Medicina', '2015-03-07', 11264869453, 'Natalia 5', 'Funcionario', '2020-09-07'),
+
+
+(82, 'Camila', 'Oliveira', '2000-12-01', 'Camila@Oliveira', 'Desenvolvedor de software', 5000.00, 'Tecnologia', '2020-03-06', 1166839040, 'Mauro 2', 'Funcionario', '2023-02-24'),
+
+
+(88, 'Paulo', 'Viera', '1993-10-29', 'Paula@Viera', 'Desing Grafíca', 6000.00, 'Desing', '2015-08-03', 1153895620, 'Tatiane 24', 'Funcionario', '2019-07-03'),
+
+
+(92, 'Tiago', 'Ribeiro', '1993-05-09', 'Tiago@Ribeiro', 'juiz', 8000.00, 'juridico', '2014-09-16', 117342975, 'Marta 40', 'funcionario', '2022-09-08'),
+
+
+(93, 'João ', 'Carvalho', '1995-11-03', 'João@Carvalho', 'Psícologo', 7000.00, 'Psícologia', '2016-03-02', 1127590453, 'Pablo 9', 'Funcionario', '2020-10-02'),
+
+
+(100, 'Kalita', 'Muniz', '2000-09-07', 'Kalita@Muniz', 'Cozinheira', 5000.00, 'Culinaria', '2012-02-23', 1155150007, 'Denis 120', 'Supervisor', '2020-05-23');
+
+
+
+
+
+
+
+--
+
+
+-- Índices para tabelas despejadas
+
+
+--
+
+
+
+
+
+
+
+--
+
+
+-- Índices para tabela `Funcionários`
+
+
+--
+
+
+ALTER TABLE `Funcionários`
+
+
+ ADD PRIMARY KEY (`ID`);
+
+
+COMMIT;
+
+
+
+
+
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
